@@ -1,10 +1,10 @@
-﻿#include <iostream>
+#include <iostream>
 
 #include <cstdlib>
 
 #include <ctime>
 
-
+int trying = 0;
 
 
 int main()
@@ -22,6 +22,8 @@ int main()
 
         char prodolshite;
 
+        
+
         srand(time(0));
 
         number_random = rand() % 21;
@@ -29,6 +31,8 @@ int main()
         std::cout << "Введите число" << std::endl;
 
         std::cin >> number;
+
+        std::cout << "хотите продолжить если да то введите 'y', если нет то 'q'" << std::endl;
 
         std::cin >> prodolshite;
 
@@ -50,8 +54,12 @@ int main()
 
             std::cout << "вы не угадали" << std::endl;
 
+            trying = trying++;
+
     }
 
+    std::cout << "количество попыток " << trying;
+    
     return 0;
 
 }
